@@ -49,6 +49,7 @@
 		align-items: center;
 		-webkit-justify-content: center;
 		justify-content: center;
+		-webkit-flex-direction: column;
 		flex-direction: column;
 		height: calc(100% - 44px);
 	}
@@ -84,8 +85,9 @@
 		background-color: #eee;
     border-bottom: 1px solid #dcdcdc;
 		padding: 10px;
-		display: flex;
+		-webkit-justify-content: space-around;
 		justify-content: space-around;
+		-webkit-flex-wrap: wrap;
 		flex-wrap: wrap;
 	}
 
@@ -128,6 +130,7 @@
 	(min-width: 320px) and (max-width: 767px) {
 
 		.nav {
+			-webkit-flex-direction: column;
 			flex-direction: column;
 		}
 
@@ -162,7 +165,7 @@
 	</style>
 </head>
 <body>
-	<div id="follow_me">
+	<div id="follow_me" class="flex">
 			<div class="linkEffect"><a href="http://www.twitter.com/loganwedwards">twitter</a></div>
 			<div class="linkEffect"><a href="http://www.facebook.com/loganwedwards">facebook</a></div>
 			<div class="linkEffect"><a href="https://plus.google.com/u/0/105917686300569376908/about">google+</a></div>
