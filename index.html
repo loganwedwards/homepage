@@ -32,6 +32,15 @@
 		height: 100%;
 	}
 
+	h1, h2, h3, h4, h5, h6 {
+		line-height: 1.2em;
+		margin: .3em 0;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
 	body {
 		margin: 0;
 		font-family: "PrintClearlyRegular", "Helvetica";
@@ -52,6 +61,7 @@
 		-webkit-flex-direction: column;
 		flex-direction: column;
 		height: calc(100% - 44px);
+		padding: 20px;
 	}
 
 	.nav {
@@ -70,6 +80,11 @@
 		text-align: center;
 		color: rgb(128,128,128);
 		font-size: 6em;
+		text-transform: uppercase;
+	}
+
+	#subtext {
+		text-align: center;
 	}
 
 	p {
@@ -78,6 +93,21 @@
 
 	.accent {
 		color: rgb(220, 16, 16);
+	}
+
+	.btn {
+		border: 1px solid;
+		padding: 5px 8px;
+		border-radius: 2px;
+		background-color: rgba(220,16,16,.1);
+		transition: all 0.3s ease-in-out;
+	}
+
+	.btn:hover {
+		color: white;
+		background-color: rgba(220,16,16,.8);
+		border-color: rgba(220,16,16,1);
+	    box-shadow: 0 0 6px -1px #777
 	}
 
 	#follow_me {
@@ -134,6 +164,10 @@
 			flex-direction: column;
 		}
 
+		#title {
+			font-size: 4em;
+		}
+
 		.nav-item {
 			margin: 10px auto;
 		}
@@ -163,27 +197,30 @@
 	}
 	-->
 	</style>
+
 </head>
 <body>
 	<div id="follow_me" class="flex">
-			<div class="linkEffect"><a href="http://www.twitter.com/loganwedwards">twitter</a></div>
-			<div class="linkEffect"><a href="http://www.facebook.com/loganwedwards">facebook</a></div>
-			<div class="linkEffect"><a href="https://plus.google.com/u/0/105917686300569376908/about">google+</a></div>
-			<div class="linkEffect"><a href="http://www.linkedin.com/in/loganedwards">linkedin</a></div>
-			<div class="linkEffect"><a href="http://zerply.com/loganwedwards/public">zerply</a></div>
-			<div class="linkEffect"><a href="https://github.com/loganwedwards">github</a></div>
-			<div class="linkEffect"><a href="http://www.500px.com/loganedwards">500px</a></div>
+			<div class="linkEffect"><a href="https://www.twitter.com/lecreatedev">twitter</a></div>
+			<div class="linkEffect"><a href="https://www.facebook.com/lecreate">facebook</a></div>
+			<div class="linkEffect"><a href="http://blog.loganwedwards.com">blog</a></div>
 	</div>
 	<div id="main" class="flex">
-		<div id="title">le<span class="accent">c</span>reate</div>
-
-		<nav class="nav flex">
-			<div class="nav-item linkEffect"><a href="http://www.le-create.com/blog">blog</a></div>
-			<div class="nav-item linkEffect"><a href="https://www.dropbox.com/s/pws15pbk2wpug7k/LWE%20Portfolio%20R3.pdf?dl=0">portfolio</a></div>
-			<div class="nav-item linkEffect"><a href="https://www.dropbox.com/s/jfw3hmy3ngtefuy/logan_edwards_resume.pdf?dl=0">resume</a></div>
-		</nav>
-
+		<h1 id="title">le <span class="accent">c</span>reate</h1>
+		<h2 id="subtext">Software development, hardware prototyping, mechanical design</h2>
+		<h2 id="contact"></h2>
 
 	</div>
+	<script language="JavaScript">
+	    var username = "logan";
+	    var hostname = "le-create.com";
+	    var linktext = username + "@" + hostname ;
+		var el = document.getElementById('contact');
+		var a = document.createElement('a');
+		a.classList.add('accent','btn');
+		a.setAttribute('href', "mail" + "to:" + username + "@" + hostname);
+		a.innerText = 'Say hello';
+	    el.appendChild(a);
+	</script>
 </body>
 </html>
