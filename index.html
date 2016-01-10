@@ -53,6 +53,11 @@
 		display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
 	}
 
+	.align-center {
+		-webkit-align-items: center;
+		align-items: center;
+	}
+
 	#main{
 		-webkit-align-items: center;
 		align-items: center;
@@ -91,6 +96,14 @@
 		font-size: 1.5em;
 	}
 
+
+	.logo {
+		width: 120px;
+		height: 120px;
+		margin-right: 30px;
+
+	}
+
 	.accent {
 		color: rgb(220, 16, 16);
 	}
@@ -113,7 +126,7 @@
 	#follow_me {
 		margin: 0 auto;
 		background-color: #eee;
-    border-bottom: 1px solid #dcdcdc;
+	    border-bottom: 1px solid #dcdcdc;
 		padding: 10px;
 		-webkit-justify-content: space-around;
 		justify-content: space-around;
@@ -206,7 +219,11 @@
 			<div class="linkEffect"><a href="http://blog.loganwedwards.com">blog</a></div>
 	</div>
 	<div id="main" class="flex">
-		<h1 id="title">le <span class="accent">c</span>reate</h1>
+		<div class="flex align-center">
+			<img class="logo" src="./logo.png" alt="le create logo" />
+			<h1 id="title">le <span class="accent">c</span>reate</h1>
+		</div>
+
 		<h2 id="subtext">Software development, hardware prototyping, mechanical design</h2>
 		<h2 id="contact"></h2>
 
